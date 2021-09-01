@@ -8,6 +8,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
+    color:white;
+    overflow:hidden;
+    transform:perspective(300px) rotateX(20deg);
+
 }
 h1 {
     color: blue;
@@ -17,4 +21,15 @@ p {
     margin-right: 400px;
     font-size: 1.6em;
     color: blue;
+}
+
+@keyframes crawl {
+    0% {
+        top: 0;
+        transform: rotateX(20deg)  translateZ(0);
+    }
+    100% {
+        top: 6000px;
+        transform: rotateX(25deg) translateZ(2500px);
+    }
 }
