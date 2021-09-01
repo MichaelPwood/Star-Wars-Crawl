@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     background-size: 100%;
     background-image: url(./img/pexels-sheena-wood-574115.jpg);
@@ -9,9 +10,15 @@ body {
     background-repeat: no-repeat;
     text-align: center;
     color:white;
-    overflow:hidden;
-    transform:perspective(300px) rotateX(20deg);
+    overflow: hidden;
+    transform: perspective(300px) rotateX(20deg);
 
+}
+.align {
+    height: 300px;
+}
+.transform {
+    animation: crawl 90s linear;
 }
 h1 {
     color: blue;
@@ -20,16 +27,42 @@ p {
     margin-left: 400px;
     margin-right: 400px;
     font-size: 1.6em;
-    color: blue;
+    color: white;
 }
 
+.p1 {
+    animation: load_p1 2s linear;
+    animation-fill-mode: forwards;
+}
+
+.p2 {
+    animation: load_p1 2s linear;
+    animation-fill-mode: forwards;
+
+}
+.p3 {
+    animation: load_p1 2s linear;
+    animation-fill-mode: forwards;
+}
+.p4 {
+    animation: load_p1 4s linear;
+    animation-fill-mode: forwards;
+}
+.p5 {
+    animation: load_p1 4s linear;
+    animation-fill-mode: forwards;
+}
 @keyframes crawl {
     0% {
-        top: 0;
+        top:0;
         transform: rotateX(20deg)  translateZ(0);
     }
     100% {
-        top: 6000px;
+        top: 5000px;
         transform: rotateX(25deg) translateZ(2500px);
     }
+}
+@keyframes load_p1 {
+    0% { opacity:0;  }
+    100% { opacity:1;  }
 }
